@@ -106,14 +106,6 @@ include 'admin/db_connect.php';
             <div class="card-body">
                 <div class="row  align-items-center justify-content-center text-center h-100">
                     <div class="">
-
-                        <div class="dropdown float-right mr-4">
-                            <a class="text-dark" href="javascript:void(0)" id="dropdownMenuButton" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-ellipsis-v"></span>
-                            </a>
-                            
-                        </div>
                         <h3><b class="filter-txt">
                                 <?php echo ucwords($row['title']) ?>
                             </b></h3>
