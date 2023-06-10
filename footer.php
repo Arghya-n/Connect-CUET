@@ -33,9 +33,6 @@
       }
     })
   }
-  $('#login_now').click(function(){
-    uni_modal("LOGIN",'login.php')
-  })
   $(document).ready(function(){
     load_cart()
      $('#preloader').fadeOut('fast', function() {
