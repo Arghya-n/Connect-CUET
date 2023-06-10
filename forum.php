@@ -145,39 +145,7 @@ include 'admin/db_connect.php';
     // $('.card.gallery-list').click(function(){
     //     location.href = "index.php?page=view_gallery&id="+$(this).attr('data-id')
     // })
-    $('#new_forum').click(function () {
-        uni_modal("New Topic", "manage_forum.php", 'mid-large')
-    })
-    $('.view_topic').click(function () {
-        location.replace('index.php?page=view_forum&id=' + $(this).attr('data-id'))
-    })
-    $('.edit_forum').click(function () {
-        uni_modal("Edit Topic", "manage_forum.php?id=" + $(this).attr('data-id'), 'mid-large')
-    })
-    $('.gallery-img img').click(function () {
-        viewer_modal($(this).attr('src'))
-    })
-    $('.delete_forum').click(function () {
-        _conf("Are you sure to delete this Topic?", "delete_forum", [$(this).attr('data-id')], 'mid-large')
-    })
 
-    function delete_forum($id) {
-        start_load()
-        $.ajax({
-            url: 'admin/ajax.php?action=delete_forum',
-            method: 'POST',
-            data: { id: $id },
-            success: function (resp) {
-                if (resp == 1) {
-                    alert_toast("Data successfully deleted", 'success')
-                    setTimeout(function () {
-                        location.reload()
-                    }, 1500)
-
-                }
-            }
-        })
-    }
     $('#filter').keypress(function (e) {
         if (e.which == 13)
             $('#search').trigger('click')
