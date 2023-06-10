@@ -1,15 +1,4 @@
-<style>
-   .modal-dialog.large {
-    width: 80% !important;
-    max-width: unset;
-  }
-  .modal-dialog.mid-large {
-    width: 50% !important;
-    max-width: unset;
-  }
- </style>
- 
- <script>
+<script>
  	$('.datepicker').datepicker({
  		format:"yyyy-mm-dd"
  	})
