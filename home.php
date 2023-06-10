@@ -131,7 +131,7 @@ include 'admin/db_connect.php';
                                         <?php echo date("F d, Y h:i A", strtotime($row['schedule'])) ?>
                                     </b></p>
                             </small></div>
-                        <hr>
+                        <hr class="divider" style="max-width: calc(80%)">
                         <larger class="truncate filter-txt">
                             <?php echo strip_tags($desc) ?>
                         </larger>
