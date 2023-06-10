@@ -45,7 +45,7 @@ include 'admin/db_connect.php';
 
 
 <div class="container mt-3 pt-2">
-    <h4 class="text-center text-white">Upcoming Events</h4>
+    <h4 class="text-center text-dark">Upcoming Events</h4>
     <hr class="divider">
     <?php
     $event = $conn->query("SELECT * FROM events where date_format(schedule,'%Y-%m%-d') >= '" . date('Y-m-d') . "' order by unix_timestamp(schedule) asc");
