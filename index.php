@@ -31,11 +31,7 @@
 } */
  
 
-a.jqte_tool_label.unselectable {
-    height: auto !important;
-    min-width: 4rem !important;
-    padding:5px
-}
+
 /*
 a.jqte_tool_label.unselectable {
     height: 22px !important;
