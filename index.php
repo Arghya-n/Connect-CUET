@@ -25,35 +25,7 @@
 		  background-repeat: no-repeat;
 		  background-size: cover;
 		}
-    
-  #viewer_modal .btn-close {
-    position: absolute;
-    z-index: 999999;
-    /*right: -4.5em;*/
-    background: unset;
-    color: white;
-    border: unset;
-    font-size: 27px;
-    top: 0;
-}
-#viewer_modal .modal-dialog {
-        width: 80%;
-    max-width: unset;
-    height: calc(90%);
-    max-height: unset;
-}
-  #viewer_modal .modal-content {
-       background: black;
-    border: unset;
-    height: calc(100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #viewer_modal img,#viewer_modal video{
-    max-height: calc(100%);
-    max-width: calc(100%);
-  }
+
   /* body, footer {
     background: #000000e6 !important;
 } */
