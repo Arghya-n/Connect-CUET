@@ -3,7 +3,7 @@ include 'admin/db_connect.php';
 ?>
 
 <header class="masthead">
-    <div class="container h-150">
+    <div class="container h-100">
         <div class="row h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-4 align-self-end mb-4" style="background: #0000002e;">
                 <h3 class="text-white ">Forum List</h3>
@@ -89,7 +89,7 @@ include 'admin/db_connect.php';
     // $('.card.gallery-list').click(function(){
     //     location.href = "index.php?page=view_gallery&id="+$(this).attr('data-id')
     // })
-
+    
     $('#filter').keypress(function (e) {
         if (e.which == 13)
             $('#search').trigger('click')

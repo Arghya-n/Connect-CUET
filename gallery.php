@@ -4,14 +4,11 @@ include 'admin/db_connect.php';
 
 
 <header class="masthead">
-    <div class="container h-50">
         <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-3 align-self-end mb-4" style="background: #0000002e;">
-                    <h3 class="text-white ">Gallery</h3>
+            <div class="col-lg-3 " style="background: #0000002e;">
+                    <h2 class="text-white ">Gallery</h2>
             </div>
-            
         </div>
-    </div>
 </header>
 <div class="container-fluid mt-3 pt-2">
     
@@ -47,7 +44,7 @@ include 'admin/db_connect.php';
         
          <div class="card gallery-list bg-dark text-white <?php echo $rtl ?>" data-id="<?php echo $row['id'] ?>">
          
-            <img src="<?php echo isset($img[$row['id']]) && is_file($fpath.'/'.$img[$row['id']]) ? $fpath.'/'.$img[$row['id']] :'' ?>" class="img-fluid " alt="">
+            <img id ="im" src="<?php echo isset($img[$row['id']]) && is_file($fpath.'/'.$img[$row['id']]) ? $fpath.'/'.$img[$row['id']] :'' ?>" class="img-fluid " alt="">
            
         
         <div class="card-img-overlay text-dark">

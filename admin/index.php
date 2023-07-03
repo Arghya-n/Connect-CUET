@@ -10,7 +10,7 @@
  	
 
 <?php
-  if(!isset($_SESSION['login_id']))
+  if(!isset($_SESSION['login_id']) || $_SESSION['login_type']!=1)
     header('location:login.php');
  include('./header.php'); 
  // include('./auth.php'); 

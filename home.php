@@ -1,20 +1,26 @@
 <?php
 include 'admin/db_connect.php';
 ?>
-
-<header class="masthead">
-    <div class="container h-50">
-        <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-4 align-self-end mb-4" style="background: #0000002e;">
-                <h3 class="text-white ">Welcome to
-                    <?php echo $_SESSION['system']['name'] ?>
-                </h3>
+<style type="text/css">
+  .masthead{
+    height:fit-content;
+  }
+  img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+<header class="masthead ">   
+        <div class="row h-50 py-4 align-items-center justify-content-center text-center">
+            <div class="col-lg-4 align-self-end" style="background: #0000002e;">
+                <h2 class="text-white ">Welcome to Connect Cuet</h2>
             </div>
         </div>
-    </div>
 </header>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+ <!-- carousel -->
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -22,13 +28,13 @@ include 'admin/db_connect.php';
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-        <img class="d-block w-100" src="admin\assets\img\shadhinotachottor.jpg" alt="First slide">
+      <img src="admin\assets\img\50years.jpg" class="d-block w-100" alt="First Slide">
     </div>
     <div class="carousel-item">
-        <img class="d-block w-100" src="admin\assets\img\50years.jpg" alt="Second slide">
+      <img src="admin\assets\img\shadhinotachottor.jpg" class="d-block w-100" alt="Second Slide">
     </div>
     <div class="carousel-item">
-        <img class="d-block w-100" src="admin\assets\img\cuet_gate.jpg" alt="Third slide">
+      <img src="admin\assets\img\cuet_gate.jpg" class="d-block w-100" alt="Third Slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -40,8 +46,6 @@ include 'admin/db_connect.php';
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-
 
 
 <div class="container mt-3 pt-2">
@@ -56,9 +60,9 @@ include 'admin/db_connect.php';
         $desc = str_replace(array("<li>", "</li>"), array("", ","), $desc);
         ?>
         <div class="card event-list" data-id="<?php echo $row['id'] ?>">
-            <div class='banner'>
+            <div class="banner d-flex justify-content-center">
                 <?php if (!empty($row['banner'])): ?>
-                    <img src="admin/assets/uploads/<?php echo ($row['banner']) ?>" alt="">
+                    <img src="admin/assets/uploads/<?php echo ($row['banner']) ?>" style="height:400px; width:800px;" alt="">
                 <?php endif; ?>
             </div>
             <div class="card-body">
@@ -72,13 +76,15 @@ include 'admin/db_connect.php';
                                         <?php echo date("F d, Y h:i A", strtotime($row['schedule'])) ?>
                                     </b></p>
                             </small></div>
-                        <hr class="divider" style="max-width: calc(80%)">
+                        <hr class="divider bg-primary" style="max-width: calc(80%)">
                         <larger class="truncate filter-txt">
                             <?php echo strip_tags($desc) ?>
                         </larger>
                         <br>
-                        <hr class="divider" style="max-width: calc(80%)">
-                        <button class="btn btn-primary float-right read_more" data-id="<?php echo $row['id'] ?>">Read
+                        <hr class="divider bg-primary" style="max-width: calc(80%)">
+                        <!-- <button class="btn btn-primary float-right read_more" data-id="<?php echo $row['id'] ?>">Read
+                            More</button> -->
+                            <button class="btn btn-primary float-right read_more" data-id="<?php echo $row['id'] ?>" >Read
                             More</button>
                     </div>
                 </div>
@@ -93,8 +99,11 @@ include 'admin/db_connect.php';
 
 
 <script>
-    $('.read_more').click(function () {
-        location.href = "index.php?page=view_event&id=" + $(this).attr('data-id')
+    // $('.read_more').click(function () {
+    //     location.href = "index.php?page=view_event&id=" + $(this).attr('data-id')
+    // })
+    $('.read_more').click(function(){
+        uni_modal("Events","view_events.php?id=" +$(this).attr('data-id'),'mid-large')
     })
     $('.banner img').click(function () {
         viewer_modal($(this).attr('src'))

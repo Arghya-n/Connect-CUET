@@ -71,4 +71,9 @@ include 'admin/db_connect.php';
     
 </div>
 
-
+<script>
+    $('.read_more').click(function(){
+        uni_modal("Careeer Opportunitiy","view_jobs.php?id="+$(this).attr('data-id'),'mid-large')
+    })
+    
+</script>

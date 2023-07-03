@@ -10,8 +10,12 @@ if($action == 'login'){
 }
 if($action == 'login2'){
 	$login = $crud->login2();
-	if($login)
+	if($login){
 		echo $login;
+		
+	}
+		
+	
 }
 if($action == 'logout'){
 	$logout = $crud->logout();
@@ -35,6 +39,7 @@ if($action == 'delete_user'){
 }
 if($action == 'signup'){
 	$save = $crud->signup();
+	
 	if($save)
 		echo $save;
 }

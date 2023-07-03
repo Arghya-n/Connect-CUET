@@ -3,13 +3,10 @@ include 'admin/db_connect.php';
 ?>
 
 <header class="masthead">
-    <div class="container h-50">
-        <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-3 align-self-end mb-4" style="background: #0000002e;">
-                    <h3 class="text-white ">Alumni List</h3>
-            </div>
-            
-        </div>
+    <div class="row h-50 py-3 align-items-center justify-content-center text-center">
+        <div class="col-lg-3 align-self-end mb-4" style="background: #0000002e;">
+            <h2 class="text-white ">Alumni List</h2>
+        </div>    
     </div>
 </header>
 <div class="container">
@@ -51,8 +48,11 @@ include 'admin/db_connect.php';
                     <p class="filter-txt">Currently working in/as <b><?php echo $row['connected_to'] ?></b></p>
                         <br>
                 </div>
-                    <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="<?php echo $fpath.'/'.$row['avatar'] ?>" data-holder-rendered="true">
+                <div>
+                <img alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="<?php echo $fpath.'/'.$row['avatar'] ?>" data-holder-rendered="true">
                 </div>
+                    
+            </div>
         </div>
         <?php endwhile; ?>
         
@@ -61,22 +61,19 @@ include 'admin/db_connect.php';
 
 
 <script>
-    // $('.card.alumni-list').click(function(){
-    //     location.href = "index.php?page=view_alumni&id="+$(this).attr('data-id')
+    // $('.book-alumni').click(function(){
+    //     uni_modal("Submit Booking Request","booking.php?alumni_id="+$(this).attr('data-id'))
     // })
-    $('.book-alumni').click(function(){
-        uni_modal("Submit Booking Request","booking.php?alumni_id="+$(this).attr('data-id'))
-    })
-    $('.alumni-img img').click(function(){
-        viewer_modal($(this).attr('src'))
-    })
+    // $('.alumni-img img').click(function(){
+    //     viewer_modal($(this).attr('src'))
+    // })
      $('#filter').keypress(function(e){
-    if(e.which == 13)
+    if(e.keyCode == 13)
         $('#search').trigger('click')
    })
     $('#search').click(function(){
         var txt = $('#filter').val()
-       //alert(txt);
+       
         start_load()
         if(txt == ''){
             $('.item').show()

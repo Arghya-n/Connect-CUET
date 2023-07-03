@@ -21,7 +21,7 @@ Class Action {
 			$qry = $this->db->query("SELECT * FROM users where username = '".$username."' and password = '".md5($password)."' ");
 			if($qry->num_rows > 0){
 				foreach ($qry->fetch_array() as $key => $value) {
-					if($key != 'passwors' && !is_numeric($key))
+					if($key != 'password' && !is_numeric($key))
 						$_SESSION['login_'.$key] = $value;
 				}
 				if($_SESSION['login_type'] != 1){
@@ -43,26 +43,25 @@ Class Action {
 				$username = $email;
 		$qry = $this->db->query("SELECT * FROM users where username = '".$username."' and password = '".md5($password)."' ");
 		if($qry->num_rows > 0){
-			foreach ($qry->fetch_array() as $key => $value) {
-				if($key != 'passwors' && !is_numeric($key))
+			foreach ($qry->fetch_assoc() as $key => $value) {
 					$_SESSION['login_'.$key] = $value;
 			}
 			if($_SESSION['login_alumnus_id'] > 0){
 				$bio = $this->db->query("SELECT * FROM alumnus_bio where id = ".$_SESSION['login_alumnus_id']);
 				if($bio->num_rows > 0){
-					foreach ($bio->fetch_array() as $key => $value) {
-						if($key != 'passwors' && !is_numeric($key))
+					foreach ($bio->fetch_assoc() as $key => $value) {
 							$_SESSION['bio'][$key] = $value;
 					}
 				}
 			}
 			if($_SESSION['bio']['status'] != 1){
-					foreach ($_SESSION as $key => $value) {
-						unset($_SESSION[$key]);
-					}
-					return 2 ;
-					exit;
-				}
+				$qry = $this->db->query("SELECT * FROM users where username = '".$username."' and password = '".md5($password)."' ");
+                foreach ($qry->fetch_assoc() as $key => $value) {
+                    unset($_SESSION['login_'.$key]);
+                }
+				return 2 ;
+				exit;
+			}
 				return 1;
 		}else{
 			return 3;
@@ -115,6 +114,7 @@ Class Action {
 	}
 	function signup(){
 		extract($_POST);
+		
 		$data = " name = '".$firstname.' '.$lastname."' ";
 		$data .= ", username = '$email' ";
 		$data .= ", password = '".md5($password)."' ";
