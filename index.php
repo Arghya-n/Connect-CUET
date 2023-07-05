@@ -20,10 +20,15 @@ include('header.php');
 
 
 <style>
+
     header.masthead {
         background: url(admin/assets/uploads/<?php echo $_SESSION['system']['cover_img'] ?>);
         background-repeat: no-repeat;
         background-size: cover;
+        
+    }
+    .masthead{
+        padding: 200px;
     }
 
     a.jqte_tool_label.unselectable {
@@ -57,28 +62,28 @@ a.jqte_tool_label.unselectable {
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-5 my-lg-0">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger"
+                    <li class="nav-item  active"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li>
+                    <li class="nav-item  active"><a class="nav-link js-scroll-trigger"
                             href="index.php?page=alumni_list">Alumni</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=gallery">Gallery</a>
+                    <li class="nav-item  active"><a class="nav-link js-scroll-trigger" href="index.php?page=gallery">Gallery</a>
                     </li>
                     <?php if (isset($_SESSION['login_id'])): ?>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=careers">Jobs</a>
+                        <li class="nav-item  active"><a class="nav-link js-scroll-trigger" href="index.php?page=careers">Jobs</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=forum">Forums</a>
+                        <li class="nav-item  active"><a class="nav-link js-scroll-trigger" href="index.php?page=forum">Forums</a>
                         </li>
                     <?php endif; ?>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a>
+                    <li class="nav-item active"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a>
                     </li>
 
                     <?php if (!isset($_SESSION['login_id'])): ?>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#login"
+                        <li class="nav-item  active"><a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#login"
                                 href="#">Login</a>
                         </li>
                     <?php else: ?>
                         <li class="nav-item dropdown">
                             <div class="float-right">
-                                <div class=" dropdown mr-4">
+                                <div class=" active dropdown mr-4">
                                     <a href="#" class="nav-link js-scroll-trigger" id="account_settings"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <?php echo $_SESSION['login_name'] ?> <i class="fa fa-angle-down"></i>

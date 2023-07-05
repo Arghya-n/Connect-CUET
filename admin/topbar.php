@@ -1,25 +1,16 @@
-<!-- <style>
-	.logo {
-    margin: auto;
-    font-size: 20px;
-    background: white;
-    padding: 7px 11px;
-    border-radius: 50% 50%;
-    color: #000000b3;
-}
-</style> -->
+<style>
 
-<nav class="navbar navbar-light fixed-top bg-dark" style="padding:0;min-height: 3.5rem">
-  <div class="container-fluid mt-2 mb-2">
-  	<div class="col-lg-12">
-  		<div class="col-md-1 float-left" style="display: flex;">
+</style>
+
+<nav class="navbar fixed-top bg-info" style="padding:0rem;max-height:1 rem">
+  <div class="container-fluid mt-2">
+  	<div class="col-lg-12 d-flex">
   		
-  		</div>
-      <div class="col-md-4 float-left text-white">
+      <div class="col-md-4 text-white" style ="margin-left: 2rem;">
         <large><b><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></b></large>
       </div>
-	  	<div class="float-right">
-        <div class=" dropdown mr-4">
+	  	<div class="ml-auto mb-3 mx-5">
+        <div class=" dropdown ">
             <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['login_name'] ?> </a>
               <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;">
                 <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Manage Account</a>

@@ -10396,7 +10396,7 @@ header.masthead:before {
     background: #00000087;
     position: absolute;
     width: calc(100%);
-    /* height: calc(100%); */
+ 
     top: 0;
     height: 60vh;
     z-index: 1;

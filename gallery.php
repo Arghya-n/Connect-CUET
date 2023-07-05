@@ -30,21 +30,13 @@ include 'admin/db_connect.php';
     $gallery = $conn->query("SELECT * from gallery order by id desc");
     while($row = $gallery->fetch_assoc()):
         
-        $ci++;
-        if($ci < 3){
-            $rtl = '';
-        }else{
-            $rtl = 'rtl';
-        }
-        if($ci == 4){
-            $ci = 0;
-        }
+        
     ?>
     <div class="col-md-6">
         
-         <div class="card gallery-list bg-dark text-white <?php echo $rtl ?>" data-id="<?php echo $row['id'] ?>">
+         <div class="card gallery-list bg-dark text-white"  data-id="<?php echo $row['id'] ?>">
          
-            <img id ="im" src="<?php echo isset($img[$row['id']]) && is_file($fpath.'/'.$img[$row['id']]) ? $fpath.'/'.$img[$row['id']] :'' ?>" class="img-fluid " alt="">
+            <img id ="im" src="<?php echo isset($img[$row['id']]) && is_file($fpath.'/'.$img[$row['id']]) ? $fpath.'/'.$img[$row['id']] :'' ?>" class="img-fluid " alt="" style="height:400px; width:800px; ">
            
         
         <div class="card-img-overlay text-dark">
@@ -65,11 +57,5 @@ include 'admin/db_connect.php';
     // $('.card.gallery-list').click(function(){
     //     location.href = "index.php?page=view_gallery&id="+$(this).attr('data-id')
     // })
-    $('.book-gallery').click(function(){
-        uni_modal("Submit Booking Request","booking.php?gallery_id="+$(this).attr('data-id'))
-    })
-    $('.gallery-img img').click(function(){
-        viewer_modal($(this).attr('src'))
-    })
-
+ 
 </script>

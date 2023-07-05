@@ -46,7 +46,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="card">
-                                <div class="card-body bg-dark">
+                                <div class="card-body bg-primary">
                                     <div class="card-body text-white">
                                         <span class="float-right summary_icon"><i class="fa fa-users"></i></span>
                                         <h4><b>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="card">
-                                <div class="card-body bg-dark">
+                                <div class="card-body bg-info">
                                     <div class="card-body text-white">
                                         <span class="float-right summary_icon"><i class="fa fa-comments"></i></span>
                                         <h4><b>
@@ -72,7 +72,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="card">
-                                <div class="card-body bg-dark">
+                                <div class="card-body bg-warning">
                                     <div class="card-body text-white">
                                         <span class="float-right summary_icon"><i class="fa fa-briefcase"></i></span>
                                         <h4><b>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="card">
-                                <div class="card-body bg-dark">
+                                <div class="card-body bg-primary">
                                     <div class="card-body text-white">
                                         <span class="float-right summary_icon"><i class="fa fa-calendar-day"></i></span>
                                         <h4><b>

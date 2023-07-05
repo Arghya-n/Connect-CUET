@@ -143,6 +143,7 @@ include 'admin/db_connect.php';
             reader.readAsDataURL(input.files[0]);
         }
     }
+    
     $('#create_account').submit(function (e) {
         e.preventDefault()
         start_load()
