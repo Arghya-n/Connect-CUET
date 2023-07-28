@@ -129,7 +129,8 @@
 			data:{id:$id},
 			success:function(resp){
 				if(resp==1){
-					alert("Data successfully deleted",'success')
+					
+					swal("Data successfully deleted","",'success')
 					setTimeout(function(){
 						location.reload()
 					},150)

@@ -3,13 +3,13 @@ include 'admin/db_connect.php';
 ?>
 
 <header class="masthead">
-    <div class="row h-50 py-3 align-items-center justify-content-center text-center">
+    <div class="row py-3 align-items-center justify-content-center text-center">
         <div class="col-lg-3 align-self-end mb-4" style="background: #0000002e;">
             <h2 class="text-white ">Alumni List</h2>
         </div>    
     </div>
 </header>
-<div class="container">
+<div class="container ">
     <div class="card mb-4 mt-4">
     <div class="card-body">
         <div class="row">

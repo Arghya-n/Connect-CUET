@@ -46,7 +46,7 @@ if (isset($_GET['id'])) {
             data: $(this).serialize(),
             success: function (resp) {
                 if (resp == 1) {
-                    alert('Data saved Successfully')
+                    swal('Data saved Successfully','','success')
                    
                     setTimeout(function () {
                         location.reload()

@@ -18,14 +18,14 @@
         <!-- <link href="css/styles.css" rel="stylesheet" /> -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link type="text/css" rel="stylesheet" href="admin/assets/css/jquery-te-1.4.0.css">
-
+        
          <link href="admin/assets/css/select2.min.css" rel="stylesheet">
 
         <script src="admin/assets/vendor/jquery/jquery.min.js"></script>
         <script src="admin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 
     <script type="text/javascript" src="admin/assets/js/select2.min.js"></script>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="admin/assets/js/jquery.datetimepicker.full.min.js"></script>
     <script type="text/javascript" src="admin/assets/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
 

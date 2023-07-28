@@ -25,7 +25,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/styles4.css" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="assets/css/jquery-te-1.4.0.css">
-  
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/DataTables/datatables.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

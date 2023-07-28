@@ -2,7 +2,7 @@
 
 </style>
 
-<nav class="navbar fixed-top bg-info" style="padding:0rem;max-height:1 rem">
+<nav class="navbar fixed-top bg-info" style="padding:0.25rem;max-height:1 rem">
   <div class="container-fluid mt-2">
   	<div class="col-lg-12 d-flex">
   		

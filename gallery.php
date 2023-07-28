@@ -34,7 +34,7 @@ include 'admin/db_connect.php';
     ?>
     <div class="col-md-6">
         
-         <div class="card gallery-list bg-dark text-white"  data-id="<?php echo $row['id'] ?>">
+         <div class="card gallery-list bg-dark"  data-id="<?php echo $row['id'] ?>">
          
             <img id ="im" src="<?php echo isset($img[$row['id']]) && is_file($fpath.'/'.$img[$row['id']]) ? $fpath.'/'.$img[$row['id']] :'' ?>" class="img-fluid " alt="" style="height:400px; width:800px; ">
            

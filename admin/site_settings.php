@@ -78,7 +78,7 @@ if($qry->num_rows > 0){
 			},
 			success:function(resp){
 				if(resp == 1){
-					alert('Data successfully saved.','success')
+					swal('Data successfully saved.','','success')
 					setTimeout(function(){
 						location.reload()
 					},1000)

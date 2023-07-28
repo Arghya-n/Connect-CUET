@@ -22,13 +22,12 @@ include 'admin/db_connect.php';
 <header class="masthead">
     <div class="container-fluid h-100">
         <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-8 align-self-end mb-4 page-title">
+            <div class="col-lg-4 align-self-end mb-4 page-title" style="background: #0000002e;">
                 <h3 class="text-white">Create Account</h3>
-                <hr class="divider my-4" />
-
-                <div class="col-md-12 mb-2 justify-content-center">
-                </div>
+                
             </div>
+            </div>
+            <!-- <hr class="divider my-4" /> -->
 
         </div>
     </div>
@@ -93,11 +92,12 @@ include 'admin/db_connect.php';
 
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-4">
+                            <div class="row d-flex justify-content-center" >
+                                <div class="col-md-4" >
                                     <label for="" class="control-label">Email</label>
                                     <input type="email" class="form-control" name="email" required>
                                 </div>
+                                
                                 <div class="col-md-4">
                                     <label for="" class="control-label">Password</label>
                                     <input type="password" class="form-control" name="password" required>
@@ -157,8 +157,11 @@ include 'admin/db_connect.php';
             type: 'POST',
             success: function (resp) {
                 if (resp == 1) {
-                    alert("Account created Successfully.")
-                    location.replace('index.php')
+                    swal("Account created Successfully.","",'success')
+                    setTimeout(function(){
+						location.replace('index.php')
+					},1000)
+                    
                 } else {
                     $('#msg').html('<div class="alert alert-danger">email already exist.</div>')
                     end_load()

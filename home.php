@@ -11,7 +11,7 @@ include 'admin/db_connect.php';
 }
 </style>
 <header class="masthead ">   
-        <div class="row h-50 py-4 align-items-center justify-content-center text-center">
+        <div class="row py-4 align-items-center justify-content-center text-center">
             <div class="col-lg-4 align-self-end" style="background: #0000002e;">
                 <h2 class="text-white ">Welcome to Connect Cuet</h2>
             </div>
@@ -20,6 +20,7 @@ include 'admin/db_connect.php';
 
 
  <!-- carousel -->
+ <div class="container">
  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -28,13 +29,13 @@ include 'admin/db_connect.php';
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="admin\assets\img\50years.jpg" class="d-block w-100" alt="First Slide">
+      <img src="admin\assets\img\50years.jpg" class="d-block w-100" alt="First Slide" >
     </div>
     <div class="carousel-item">
-      <img src="admin\assets\img\shadhinotachottor.jpg" class="d-block w-100" alt="Second Slide">
+      <img src="admin\assets\img\shadhinotachottor.jpg" class="d-block w-100" alt="Second Slide" >
     </div>
     <div class="carousel-item">
-      <img src="admin\assets\img\cuet_gate.jpg" class="d-block w-100" alt="Third Slide">
+      <img src="admin\assets\img\cuet_gate.jpg" class="d-block w-100" alt="Third Slide" >
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -46,6 +47,8 @@ include 'admin/db_connect.php';
     <span class="sr-only">Next</span>
   </a>
 </div>
+ </div>
+ 
 
 
 <div class="container mt-3 pt-2">

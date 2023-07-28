@@ -89,9 +89,9 @@ Class Action {
 		if(!empty($password))
 		$data .= ", password = '".md5($password)."' ";
 		$data .= ", type = '$type' ";
-		if($type == 1)
-			$establishment_id = 0;
-		$data .= ", establishment_id = '$establishment_id' ";
+		// if($type == 1)
+		// 	$establishment_id = 0;
+		// $data .= ", establishment_id = '$establishment_id' ";
 		$chk = $this->db->query("Select * from users where username = '$username' and id !='$id' ")->num_rows;
 		if($chk > 0){
 			return 2;
@@ -109,8 +109,22 @@ Class Action {
 	function delete_user(){
 		extract($_POST);
 		$delete = $this->db->query("DELETE FROM users where id = ".$id);
-		if($delete)
+
+		if($delete){
 			return 1;
+		}
+			
+	}
+	function delete_alumni(){
+		extract($_POST);
+		$delete = $this->db->query("DELETE FROM users where alumnus_id = ".$id);
+
+		if($delete){
+			$alumnidlt=$this->db->query("DELETE FROM alumnus_bio where id = ".$id);
+			if($alumnidlt){
+				return 1;
+			}
+		}
 	}
 	function signup(){
 		extract($_POST);
@@ -225,9 +239,10 @@ Class Action {
 	
 	function save_course(){
 		extract($_POST);
+		//INSERT INTO `courses` ( `course`) VALUES (NULL, 'B.Sc in Physics')
 		$data = " course = '$course' ";
 			if(empty($id)){
-				$save = $this->db->query("INSERT INTO courses set $data");
+				$save = $this->db->query("INSERT INTO `courses` ( `course`) VALUES ('$data')");
 			}else{
 				$save = $this->db->query("UPDATE courses set $data where id = $id");
 			}
@@ -243,6 +258,8 @@ Class Action {
 	}
 	function update_alumni_acc(){
 		extract($_POST);
+		
+		
 		$update = $this->db->query("UPDATE alumnus_bio set status = $status where id = $id");
 		if($update)
 			return 1;
