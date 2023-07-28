@@ -239,10 +239,10 @@ Class Action {
 	
 	function save_course(){
 		extract($_POST);
-		//INSERT INTO `courses` ( `course`) VALUES (NULL, 'B.Sc in Physics')
+		
 		$data = " course = '$course' ";
 			if(empty($id)){
-				$save = $this->db->query("INSERT INTO `courses` ( `course`) VALUES ('$data')");
+				$save = $this->db->query("INSERT INTO `courses` (`course`) VALUES ('$course')");
 			}else{
 				$save = $this->db->query("UPDATE courses set $data where id = $id");
 			}
