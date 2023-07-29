@@ -3,7 +3,11 @@ include 'admin/db_connect.php';
 ?>
 <style type="text/css">
   .masthead{
-    height:fit-content;
+    max-height: 400px !important;
+        height: 400px !important;
+        background: url(admin/assets/uploads/1685856900_cuet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
   }
   img {
   max-width: 100%;

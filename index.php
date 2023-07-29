@@ -4,15 +4,7 @@
 <?php
 session_start();
 include('admin/db_connect.php');
-ob_start();
-$query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
-foreach ($query as $key => $value) {
-    if (!is_numeric($key)) {
-        $_SESSION['system'][$key] = $value;
-    }
 
-}
-ob_end_flush();
 include('header.php');
 
 
@@ -22,7 +14,9 @@ include('header.php');
 <style>
 
     header.masthead {
-        background: url(admin/assets/uploads/<?php echo $_SESSION['system']['cover_img'] ?>);
+        max-height: 400px !important;
+        height: 400px !important;
+        background: url(admin/assets/uploads/1685856900_cuet.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         
@@ -55,7 +49,7 @@ a.jqte_tool_label.unselectable {
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-3 " id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger " href="./">
-                <?php echo $_SESSION['system']['name'] ?>
+                 CONNECT_CUET
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"

@@ -9,7 +9,9 @@ include 'admin/db_connect.php';
             <div class="col-lg-3 align-self-end mb-4" style="background: #0000002e;">
                     <h3 class="text-white ">Job List</h3>
             </div>
-            
+            <div class="row col-md-12 mb-2 justify-content-center">
+                    <button class="btn btn-primary btn-block col-sm-4" type="button" id="new_career"><i class="fa fa-plus"></i> Post a Job Opportunity</button>
+            </div> 
         </div>
     </div>
 </header>
@@ -75,5 +77,36 @@ include 'admin/db_connect.php';
     $('.read_more').click(function(){
         uni_modal("Careeer Opportunitiy","view_jobs.php?id="+$(this).attr('data-id'),'mid-large')
     })
-    
+    $('#new_career').click(function(){
+        uni_modal("New Job Hiring","manage_career.php",'mid-large')
+    })
+    $('.gallery-img img').click(function(){
+        viewer_modal($(this).attr('src'))
+    })
+
+   $('#filter').keypress(function(e){
+    if(e.which == 13)
+        $('#search').trigger('click')
+   })
+    $('#search').click(function(){
+        var txt = $('#filter').val()
+        start_load()
+        if(txt == ''){
+        $('.job-list').show()
+        end_load()
+        return false;
+        }
+        $('.job-list').each(function(){
+            var content = "";
+            $(this).find(".filter-txt").each(function(){
+                content += ' '+$(this).text()
+            })
+            if((content.toLowerCase()).includes(txt.toLowerCase()) == true){
+                $(this).toggle(true)
+            }else{
+                $(this).toggle(false)
+            }
+        })
+        end_load()
+    })
 </script>

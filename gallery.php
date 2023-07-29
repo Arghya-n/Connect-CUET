@@ -5,7 +5,7 @@ include 'admin/db_connect.php';
     .head{
         max-height: 400px !important;
         height: 400px !important;
-        background: url(admin/assets/uploads/<?php echo $_SESSION['system']['cover_img'] ?>);
+        background: url(admin/assets/uploads/1685856900_cuet.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
