@@ -1,9 +1,17 @@
 <?php 
 include 'admin/db_connect.php'; 
 ?>
+<style>
+    .head{
+        max-height: 400px !important;
+        height: 400px !important;
+        background: url(admin/assets/uploads/<?php echo $_SESSION['system']['cover_img'] ?>);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
 
-
-<header class="masthead">
+<header class="head">
         <div class="row h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-3 " style="background: #0000002e;">
                     <h2 class="text-white ">Gallery</h2>

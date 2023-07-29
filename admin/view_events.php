@@ -1,5 +1,5 @@
 <?php
-include('./admin/db_connect.php');
+include('db_connect.php');
 if (isset($_GET['id'])) {
     $qry = $conn->query("SELECT * FROM events where id=" . $_GET['id'])->fetch_array();
     foreach ($qry as $k => $v) {
@@ -32,7 +32,7 @@ if (isset($_GET['id'])) {
     <div class="container d-flex justify-content-center">
         
         <?php if ($banner): ?>
-            <img class="d-flex justify-content-center" src="admin/assets/uploads/<?php echo $banner; ?>" style="height:400px; width:1000px;">
+            <img  src="assets/uploads/<?php echo $banner; ?>" style="  min-height: 400px; min-width: 600px;">
         <?php endif; ?>
         
     </div>

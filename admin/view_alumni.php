@@ -60,7 +60,6 @@ if (isset($_GET['id'])) {
 </div>
 
 
-
 <script>
     $('.update').click(function(){
 		start_load()

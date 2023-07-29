@@ -412,13 +412,5 @@ Class Action {
 		}
 	}
 	
-	function participate(){
-		extract($_POST);
-		$data = " event_id = '$event_id' ";
-		$data .= ", user_id = '{$_SESSION['login_id']}' ";
-		$commit = $this->db->query("INSERT INTO event_commits set $data ");
-		if($commit)
-			return 1;
-
-	}
+	
 }

@@ -11,7 +11,7 @@ a:hover {
       z-index: 99;
       left: 0;
       width: 250px;
-      background: url(../uploads/art-cover.jpg);
+      background: url(../uploads/1685892840_cuet.jpg);
       background-repeat: no-repeat;
       background-size: cover;
   }
@@ -26,7 +26,7 @@ a:hover {
       font-weight: 600;
   }
   a.nav-item:hover, .nav-item.active {
-      background-color: #f80fe031;
+      background-color: #e7e1e731;
       color: #f5f9f8;
   }
   main#view-panel{

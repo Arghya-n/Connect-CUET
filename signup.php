@@ -92,7 +92,7 @@ include 'admin/db_connect.php';
 
                                 </div>
                             </div>
-                            <div class="row d-flex justify-content-center" >
+                            <div class="row justify-content-center " >
                                 <div class="col-md-4" >
                                     <label for="" class="control-label">Email</label>
                                     <input type="email" class="form-control" name="email" required>
