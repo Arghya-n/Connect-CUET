@@ -11,7 +11,7 @@ nav#sidebar {
     z-index: 99;
     left: 0;
     width: 250px;
-    background: url(../uploads/art-cover.jpg);
+    background: url(assets/uploads/gallery/7_img.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -26,7 +26,7 @@ a.nav-item {
     font-weight: 600;
 }
 a.nav-item:hover, .nav-item.active {
-    background-color: #f80fe031;
+    background-color: #e7e1e731;
     color: #f5f9f8;
 }
 main#view-panel{
@@ -52,7 +52,19 @@ span.stat-icons {
     color: #0000005c;
 } */
 
-
+.toast{
+  display: none;
+  min-width: 20vw
+}
+.toast.show {
+    display: block;
+    opacity: 1;
+    position: fixed;
+    z-index: 99999999;
+    margin: 20px;
+    right: 0;
+    top: 3.5rem;
+}
 
 #preloader2 {
   position: fixed;

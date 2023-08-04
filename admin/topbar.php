@@ -7,7 +7,7 @@
   	<div class="col-lg-12 d-flex">
   		
       <div class="col-md-4 text-white" style ="margin-left: 2rem;">
-        <large><b><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></b></large>
+        <large><b>Connect_CUET</b></large>
       </div>
 	  	<div class="ml-auto mb-3 mx-5">
         <div class=" dropdown ">

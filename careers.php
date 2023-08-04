@@ -3,10 +3,10 @@ include 'admin/db_connect.php';
 ?>
 
 
-<header class="masthead">
+<header class="head">
     <div class="container h-50">
         <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-3 align-self-end mb-4" style="background: #0000002e;">
+            <div class="col-lg-3 align-self-end mb-4 heading" >
                     <h3 class="text-white ">Job List</h3>
             </div>
             <div class="row col-md-12 mb-2 justify-content-center">

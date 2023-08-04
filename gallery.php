@@ -2,18 +2,24 @@
 include 'admin/db_connect.php'; 
 ?>
 <style>
-    .head{
+    .head {
         max-height: 400px !important;
         height: 400px !important;
-        background: url(admin/assets/uploads/1685856900_cuet.jpg);
+        background: url(admin/assets/uploads/gallery/7_img.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
+       
+        
+    }
+    .heading{
+        background-color:cadetblue;
+        border-radius: 20px;
     }
 </style>
 
 <header class="head">
         <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-3 " style="background: #0000002e;">
+            <div class="col-lg-3 heading">
                     <h2 class="text-white ">Gallery</h2>
             </div>
         </div>

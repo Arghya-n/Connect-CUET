@@ -3,20 +3,13 @@
 <?php 
 session_start();
 include('./db_connect.php');
-ob_start();
-if(!isset($_SESSION['system'])){
-	$system = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
-	foreach($system as $k => $v){
-		$_SESSION['system'][$k] = $v;
-	}
-}
-ob_end_flush();
+
 ?>
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title><?php echo $_SESSION['system']['name'] ?></title>
+  <title>Connect_CUET</title>
  	
 
 <?php include('./header.php'); ?>
@@ -55,7 +48,7 @@ header("location:index.php?page=home");
 		background:#59b6ec61;
 		display: flex;
 		align-items: center;
-		background: url(assets/uploads/<?php echo $_SESSION['system']['cover_img'] ?>);
+		background: url(assets/uploads/gallery/7_img.jpeg);
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	}

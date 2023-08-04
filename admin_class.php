@@ -6,7 +6,7 @@ Class Action {
 
 	public function __construct() {
 		ob_start();
-   	include 'db_connect.php';
+   	include 'admin/db_connect.php';
     
     $this->db = $conn;
 	}
@@ -166,6 +166,7 @@ Class Action {
 		}
 	}
 	function update_account(){
+        
 		extract($_POST);
 		$data = " name = '".$firstname.' '.$lastname."' ";
 		$data .= ", username = '$email' ";

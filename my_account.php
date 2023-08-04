@@ -9,15 +9,14 @@ include 'admin/db_connect.php';
         max-width: 140px;
     }
 </style>
-        <header class="masthead">
+        <header class="head">
             <div class="container-fluid h-50">
                 <div class="row h-50 align-items-center justify-content-center text-center">
-                    <div class="col-lg-4 align-self-end mb-4 page-title" style="background: #0000002e;">
+                    <div class="col-lg-4 align-self-end mb-4 page-title heading" >
                     	<h3 class="text-white">Manage Account</h3>
-                        <hr class="divider my-4" />
+                        
 
-                    <div class="col-md-12 mb-2 justify-content-center">
-                    </div>                        
+                                          
                     </div>
                     
                 </div>

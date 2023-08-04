@@ -1,5 +1,8 @@
 
 <style>
+	#sidebar{
+		background-color:gray !important;
+	}
 	
 </style>
 

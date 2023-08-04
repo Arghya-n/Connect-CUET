@@ -12,7 +12,7 @@
 <?php
   if(!isset($_SESSION['login_id']) || $_SESSION['login_type']!=1)
     header('location:login.php');
- include('./header.php'); 
+ include('header.php'); 
  // include('./auth.php'); 
  ?>
 
@@ -20,6 +20,7 @@
 <style>
 	body{
         background: #80808045;
+        
   }
   .modal-dialog.large {
     width: 80% !important;
@@ -53,10 +54,7 @@
     align-items: center;
     justify-content: center;
   }
-  #viewer_modal img,#viewer_modal video{
-    max-height: calc(100%);
-    max-width: calc(100%);
-  }
+ 
 
 </style>
 

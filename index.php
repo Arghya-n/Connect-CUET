@@ -13,16 +13,19 @@ include('header.php');
 
 <style>
 
-    header.masthead {
+.head {
         max-height: 400px !important;
         height: 400px !important;
-        background: url(admin/assets/uploads/1685856900_cuet.jpg);
+        background: url(admin/assets/uploads/gallery/7_img.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
+       
         
     }
-    .masthead{
-        padding: 200px;
+    .heading{
+        background-color:cadetblue;
+        border-radius: 20px;
+        margin: 200px;
     }
 
     a.jqte_tool_label.unselectable {
@@ -30,7 +33,10 @@ include('header.php');
         min-width: 4rem !important;
         padding: 5px
     }
-
+    .new1{
+        margin-right: 50px;
+        
+    }
     /* body, footer {
     background: #000000e6 !important;
 } */
@@ -69,6 +75,7 @@ a.jqte_tool_label.unselectable {
                     <?php endif; ?>
                     <li class="nav-item active"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a>
                     </li>
+                    
 
                     <?php if (!isset($_SESSION['login_id'])): ?>
                         <li class="nav-item  active"><a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#login"
@@ -93,10 +100,14 @@ a.jqte_tool_label.unselectable {
                         </li>
                     <?php endif; ?>
                 </ul>
+                
+                
+                
             </div>
-
+            
         </div>
-
+        <a href="admin/login.php" class="btn btn-primary new1" role="button" data-bs-toggle="button">Admin</a>
+        
     </nav>
 
 

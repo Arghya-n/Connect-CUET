@@ -16,21 +16,27 @@ include 'admin/db_connect.php';
         max-height: 10vh;
         max-width: 6vw;
     }
-    
+    .head {
+        max-height: 400px !important;
+        height: 400px !important;
+        background: url(admin/assets/uploads/gallery/7_img.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+        
+    }
+    .heading{
+        background-color:deepskyblue;
+        border-radius: 20px;
+    }
 </style>
 
-<header class="masthead">
-    <div class="container-fluid h-100">
-        <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-4 align-self-end mb-4 page-title" style="background: #0000002e;">
-                <h3 class="text-white">Create Account</h3>
-                
+<header class="head">
+        <div class="row h-100 justify-content-center text-center align-items-center ">
+            <div class="col-lg-4 heading">
+                    <h2 class="text-dark ">Create New Account</h2>
             </div>
-            </div>
-            <!-- <hr class="divider my-4" /> -->
-
         </div>
-    </div>
 </header>
 <div class="container mt-3">
     <div class="col-lg-15">

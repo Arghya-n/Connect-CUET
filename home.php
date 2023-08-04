@@ -1,7 +1,7 @@
 <?php
 include 'admin/db_connect.php';
 ?>
-<style type="text/css">
+<style >
   .masthead{
     max-height: 400px !important;
         height: 400px !important;
@@ -9,15 +9,16 @@ include 'admin/db_connect.php';
         background-repeat: no-repeat;
         background-size: cover;
   }
+  
   img {
   max-width: 100%;
   height: auto;
-}
+ }
 </style>
-<header class="masthead ">   
-        <div class="row py-4 align-items-center justify-content-center text-center">
-            <div class="col-lg-4 align-self-end" style="background: #0000002e;">
-                <h2 class="text-white ">Welcome to Connect Cuet</h2>
+<header class="head">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-5 heading">
+                    <h2 class="text-white ">Welcome to CONNECT_CUET</h2>
             </div>
         </div>
 </header>

@@ -2,15 +2,15 @@
 include 'admin/db_connect.php'; 
 ?>
 
-<header class="masthead">
-    <div class="container-fluid h-100">
-        <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-3 align-self-end mb-4 page-title" style="background-color: #0000002e;">
-                <h3 class="text-white">Forum List</h3>
-                <hr class="divider my-2" />
+<header class="head">
+    <div class="container-fluid">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-lg-3 align-self-end mb-4 page-title heading" style="height: 50px;" >
+                <h3 class="text-white py-1">Forum List</h3>
+              
             </div>
             <div class="row col-md-12 mb-2 justify-content-center">
-                    <button class="btn btn-primary btn-block col-sm-4" type="button" id="new_forum"><i class="fa fa-plus"></i> Create New Topic</button>
+                    <button class="btn btn-primary btn-block col-sm-3" type="button" id="new_forum"><i class="fa fa-plus"></i> Create New Topic</button>
             </div>   
             
             
