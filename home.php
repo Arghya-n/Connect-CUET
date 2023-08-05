@@ -2,13 +2,7 @@
 include 'admin/db_connect.php';
 ?>
 <style >
-  .masthead{
-    max-height: 400px !important;
-        height: 400px !important;
-        background: url(admin/assets/uploads/1685856900_cuet.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-  }
+  
   
   img {
   max-width: 100%;
@@ -17,8 +11,8 @@ include 'admin/db_connect.php';
 </style>
 <header class="head">
         <div class="row align-items-center justify-content-center text-center">
-            <div class="col-lg-5 heading">
-                    <h2 class="text-white ">Welcome to CONNECT_CUET</h2>
+            <div class="col-md-4 heading">
+                    <h4 class="text-white ">Welcome to CONNECT_CUET</h4>
             </div>
         </div>
 </header>

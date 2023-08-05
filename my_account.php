@@ -13,7 +13,7 @@ include 'admin/db_connect.php';
             <div class="container-fluid h-50">
                 <div class="row h-50 align-items-center justify-content-center text-center">
                     <div class="col-lg-4 align-self-end mb-4 page-title heading" >
-                    	<h3 class="text-white">Manage Account</h3>
+                    	<h4 class="text-white">Manage Account</h4>
                         
 
                                           

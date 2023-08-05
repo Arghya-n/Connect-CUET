@@ -5,7 +5,7 @@ include 'admin/db_connect.php';
 <header class="head">
     <div class="row py-3 align-items-center justify-content-center text-center">
         <div class="col-lg-3 align-self-end mb-4 heading" >
-            <h2 class="text-white ">Alumni List</h2>
+            <h4 class="text-white ">Alumni List</h4>
         </div>    
     </div>
 </header>

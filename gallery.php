@@ -3,8 +3,8 @@ include 'admin/db_connect.php';
 ?>
 <style>
     .head {
-        max-height: 400px !important;
-        height: 400px !important;
+        max-height: 300px !important;
+        height: 300px !important;
         background: url(admin/assets/uploads/gallery/7_img.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -18,9 +18,9 @@ include 'admin/db_connect.php';
 </style>
 
 <header class="head">
-        <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="row align-items-center justify-content-center text-center">
             <div class="col-lg-3 heading">
-                    <h2 class="text-white ">Gallery</h2>
+                    <h4 class="text-white ">Gallery</h4>
             </div>
         </div>
 </header>

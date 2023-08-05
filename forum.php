@@ -6,7 +6,7 @@ include 'admin/db_connect.php';
     <div class="container-fluid">
         <div class="row align-items-center justify-content-center text-center">
             <div class="col-lg-3 align-self-end mb-4 page-title heading" style="height: 50px;" >
-                <h3 class="text-white py-1">Forum List</h3>
+                <h4 class="text-white py-1">Forum List</h4>
               
             </div>
             <div class="row col-md-12 mb-2 justify-content-center">

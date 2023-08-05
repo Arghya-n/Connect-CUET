@@ -6,8 +6,8 @@ include 'admin/db_connect.php';
 <header class="head">
     <div class="container h-50">
         <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-3 align-self-end mb-4 heading" >
-                    <h3 class="text-white ">Job List</h3>
+            <div class="col-lg-4 align-self-end mb-4 heading" >
+                    <h4 class="text-white ">Job List</h4>
             </div>
             <div class="row col-md-12 mb-2 justify-content-center">
                     <button class="btn btn-primary btn-block col-sm-4" type="button" id="new_career"><i class="fa fa-plus"></i> Post a Job Opportunity</button>
